@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'Práctica 3: Sistema musculoesquelético '
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Sara
+    family-names: Gutiérrez Hernández
+    email: l23212734@tijuana.tecnm.mx
+    affiliation: TecNM / IT Tijuana
+repository-code: 'https://github.com/sarag-hub/MSFP3'
+keywords:
+  - sistema musculoesquelético
+  - modelo viscoelástico
+  - analogía fuerza-voltaje
+  - atrofia muscular
+  - controlador PI
+  - MATLAB
+  - Simulink
+  - Simscape Electrical
+  - Python
+  - simulación in silico
+license: BSD-2-Clause
+version: '1.0'
+date-released: '2026-11-04'
