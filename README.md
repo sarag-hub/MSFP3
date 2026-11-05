@@ -630,17 +630,18 @@ La entrada corresponde a un pulso rectangular de amplitud $1\,\mathrm{V}$ en su 
 
 ### Configuración de MATLAB/Simulink
 
-En MATLAB/Simulink se utiliza el modelo `sistema.slx`, estableciendo un tiempo final de simulación de $10\,\mathrm{s}$ y el solver `ode15s`, con un paso máximo de integración de $10^{-3}\,\mathrm{s}$.
+En MATLAB/Simulink se utiliza el modelo `sistema4.slx`, estableciendo un tiempo final de simulación de $10\,\mathrm{s}$ y el solver `ode15s`, con un paso máximo de integración de $10^{-3}\,\mathrm{s}$.
 
 La configuración empleada en el cuaderno computacional es:
 
 ```matlab
 clc; clear; close all; warning('off','all')
-open_system('sistema')
+open_system('sistema4')
 parameters.StopTime = '10';
 parameters.Solver = 'ode15s';
 parameters.MaxStep = '1e-3';
-x = sim('sistema',parameters);
+parameters.TimeSaveName = 't';
+x = sim('sistema4',parameters);
 ```
 
 El solver `ode15s` permite resolver numéricamente las ecuaciones implementadas en Simulink. Las señales obtenidas se almacenan en el *Workspace* para su posterior representación gráfica mediante el cuaderno computacional de MATLAB.
@@ -730,17 +731,18 @@ La configuración del circuito considera las relaciones entre los desplazamiento
 
 ### 3. Ejecución desde el cuaderno computacional de MATLAB
 
-El cuaderno `Gamez23212193.mlx` permite ejecutar el modelo de Simulink y recuperar las señales almacenadas durante la simulación.
+El cuaderno `P3_Gutierrez23212734.mlx` permite ejecutar el modelo de Simulink y recuperar las señales almacenadas durante la simulación.
 
 La ejecución se realiza mediante:
 
 ```matlab
 clc; clear; close all; warning('off','all')
-open_system('sistema')
+open_system('sistema4')
 parameters.StopTime = '10';
 parameters.Solver = 'ode15s';
 parameters.MaxStep = '1e-3';
-x = sim('sistema',parameters);
+parameters.TimeSaveName = 't';
+x = sim('sistema4',parameters);
 ```
 
 Las respuestas obtenidas se almacenan dentro de la estructura `x`, permitiendo identificar las siguientes señales:
@@ -753,7 +755,7 @@ Las respuestas obtenidas se almacenan dentro de la estructura `x`, permitiendo i
 Posteriormente, las señales se representan mediante la función `plotsignals`, definida en el cuaderno computacional:
 
 ```matlab
-plotsignals(x.t,x.F,x.Fsx,x.Fsy,x.PID,'Caso');
+plotsignals(x.t,x.F,x.Fsx,x.Fsy,x.PID,'Control y caso')
 ```
 
 La función permite comparar las cuatro señales dentro de una misma figura, identificando adecuadamente sus variables, unidades y condiciones de simulación.
@@ -767,7 +769,7 @@ El intervalo temporal se establece entre $0$ y $10\,\mathrm{s}$, mientras que el
 Las figuras se exportan en formato PDF vectorial mediante:
 
 ```matlab
-exportgraphics(gcf,[signal,'_matlab.pdf'],'ContentType','vector')
+exportgraphics(gcf,[caso,'.matlab.pdf'],'contenttype','vector')
 ```
 
 
@@ -854,11 +856,11 @@ El controlador se implementa mediante el bloque `PID Controller` de Simulink, ut
 Los valores obtenidos durante la sintonización y utilizados posteriormente en Python son:
 
 $$
-\boxed{k_P=0.0218624136400493}
+\boxed{k_P=0.038181381978369}
 $$
 
 $$
-\boxed{k_I=41509.2699941618}
+\boxed{k_I=23767.5559547179}
 $$
 
 $$
@@ -869,7 +871,7 @@ Por lo tanto, la función de transferencia del controlador PI implementado es:
 
 $$
 \boxed{
-K(s)=\frac{0.0218624136400493s+41509.2699941618}{s}
+K(s)=\frac{0.038181381978369s+23767.5559547179}{s}
 }
 $$
 
@@ -923,14 +925,14 @@ Sustituyendo las ganancias obtenidas mediante Tune:
 $$
 R_e=
 \frac{1}
-{(1\times10^{-6})(41509.2699941618)}
+{(1\times10^{-6})(23767.5559547179)}
 \approx24.091\ \Omega.
 $$
 
 Para la resistencia proporcional:
 
 $$
-R_r=(0.0218624136400493)(24.091)
+R_r=(0.038181381978369)(24.091)
 \approx0.5267\ \Omega.
 $$
 
@@ -938,8 +940,8 @@ Por lo tanto, los valores calculados para la representación del controlador son
 
 | Componente | Valor |
 |---|---:|
-| Ganancia proporcional $k_P$ | $0.0218624$ |
-| Ganancia integral $k_I$ | $41509.27$ |
+| Ganancia proporcional $k_P$ | $0.03818$ |
+| Ganancia integral $k_I$ | $23767.55$ |
 | Ganancia derivativa $k_D$ | $0$ |
 | Capacitor $C_r$ | $1\ \mu\mathrm{F}$ |
 | Resistencia $R_e$ | $24.091\ \Omega$ |
