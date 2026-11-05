@@ -926,14 +926,14 @@ $$
 R_e=
 \frac{1}
 {(1\times10^{-6})(23767.5559547179)}
-\approx24.091\ \Omega.
+\approx42.074\ \Omega.
 $$
 
 Para la resistencia proporcional:
 
 $$
-R_r=(0.038181381978369)(24.091)
-\approx0.5267\ \Omega.
+R_r=(0.038181381978369)(42.074)
+\approx1.6064\ \Omega.
 $$
 
 Por lo tanto, los valores calculados para la representación del controlador son:
@@ -944,8 +944,8 @@ Por lo tanto, los valores calculados para la representación del controlador son
 | Ganancia integral $k_I$ | $23767.55$ |
 | Ganancia derivativa $k_D$ | $0$ |
 | Capacitor $C_r$ | $1\ \mu\mathrm{F}$ |
-| Resistencia $R_e$ | $24.091\ \Omega$ |
-| Resistencia $R_r$ | $0.5267\ \Omega$ |
+| Resistencia $R_e$ | $42.074\ \Omega$ |
+| Resistencia $R_r$ | $1.6064\ \Omega$ |
 
 Estos valores corresponden a la representación matemática del controlador implementada en Python y no a una construcción física experimental.
 
@@ -1019,9 +1019,9 @@ La respuesta del individuo sano presenta un comportamiento transitorio rápido, 
 Posteriormente, se implementa el controlador PI utilizando las ganancias obtenidas mediante la herramienta Tune de Simulink:
 
 $$
-k_P=0.0218624136400493,
+k_P=0.038181381978369,
 \qquad
-k_I=41509.2699941618.
+k_I=23767.5559547179.
 $$
 
 El sistema controlado se construye mediante retroalimentación negativa unitaria:
