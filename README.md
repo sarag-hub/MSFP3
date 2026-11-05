@@ -167,7 +167,7 @@ La práctica se desarrolla exclusivamente mediante experimentación *in silico*.
 
 El diagrama biológico representa la relación entre las estructuras del sistema musculoesquelético y los elementos del modelo mecánico viscoelástico. Se identifican el elemento contráctil muscular, el amortiguamiento viscoso, las propiedades elásticas de los tejidos y tendones, así como las fuerzas y desplazamientos asociados al funcionamiento del sistema.
 
-![Modelo biológico del sistema musculoesquelético](PRACTICA3_Diagrama.png)
+![Modelo biológico del sistema musculoesquelético](P3_Diagrama.png)
 
 **Figura 1.** Representación biológica del sistema musculoesquelético y su correspondencia con el modelo mecánico viscoelástico simplificado. Elaboración mediante BioRender.
 
