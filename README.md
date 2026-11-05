@@ -1325,15 +1325,15 @@ La organización de los archivos permite documentar el desarrollo matemático, l
 .
 ├── README.md                             # Reporte y documentación
 ├── CITATION.cff                          # Datos de citación (por incorporar)
-├── Análisis.pdf                          # Desarrollo matemático a mano
-├── Gamez23212193.mlx                     # Cuaderno computacional MATLAB
-├── Gamez23212193.pdf                     # Exportación del cuaderno MATLAB
-├── sistema.slx                           # Modelo Simulink/Simscape
-├── Gamez23212193.py                      # Implementación en Python
-├── Caso_matlab.pdf                       # Respuestas obtenidas en MATLAB
-├── Caso_python.pdf                       # Respuestas obtenidas en Python
-├── Controlador PI.png                    # Evidencia de sintonización
-└── Biorender_SistemaMusculoesqueletico.png # Diagrama biológico
+├── P3_Apuntes.pdf                        # Desarrollo matemático a mano
+├── Gutierrez23212734.mlx                 # Cuaderno computacional MATLAB
+├── Gutierrez23212734.pdf                 # Exportación del cuaderno MATLAB
+├── sistema4.slx                          # Modelo Simulink/Simscape
+├── Gutierrez23212734.py                  # Implementación en Python
+├── matlab_Control y caso.pdf             # Respuestas obtenidas en MATLAB
+├── Caso y control_python.pdf             # Respuestas obtenidas en Python
+├── P3_PI.png                             # Evidencia de sintonización
+└── P3_Diagrama.png                       # Diagrama biológico
 ```
 
 **Criterio de nombres:** los archivos conservan las denominaciones utilizadas durante el desarrollo de la práctica. Las figuras correspondientes a MATLAB y Python presentan las respuestas de la entrada, el individuo sano, el caso simulado de atrofia muscular y el sistema controlado. Los archivos complementarios permiten conservar el análisis matemático, la representación fisiológica y los parámetros utilizados durante la sintonización. El archivo `CITATION.cff` deberá incorporarse si todavía no se encuentra disponible en el repositorio.
