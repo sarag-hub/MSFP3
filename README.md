@@ -1,6 +1,6 @@
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=carolinagamez/MSFP3)
 
-# Práctica 3 — Modelado y control del sistema musculoesquelético
+
+# Práctica 3 — Sistema musculoesquelético
 
 Repositorio académico de la asignatura **Modelado de Sistemas Fisiológicos**, correspondiente al programa de **Ingeniería Biomédica** del Tecnológico Nacional de México / Instituto Tecnológico de Tijuana. Esta práctica integra modelado matemático, analogías electromecánicas, análisis temporal y de estabilidad, diseño de controladores, simulación computacional y verificación cruzada de resultados.
 
@@ -12,7 +12,7 @@ El caso de estudio representa el **sistema musculoesquelético** mediante un mod
 **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de Tijuana  
 **Asignatura:** Modelado de Sistemas Fisiológicos  
 **Programa:** Ingeniería Biomédica  
-**Estudiante:** Carolina Gamez Flores · 23212193 · l23212193@tectijuana.edu.mx
+**Estudiante:** Sara Gutiérrez Hernández · 23212734 · l23212734@tectijuana.edu.mx
 
 **Repositorio de la asignatura:** https://github.com/DrPaulValle/MSF-IBF1020  
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
@@ -167,7 +167,7 @@ La práctica se desarrolla exclusivamente mediante experimentación *in silico*.
 
 El diagrama biológico representa la relación entre las estructuras del sistema musculoesquelético y los elementos del modelo mecánico viscoelástico. Se identifican el elemento contráctil muscular, el amortiguamiento viscoso, las propiedades elásticas de los tejidos y tendones, así como las fuerzas y desplazamientos asociados al funcionamiento del sistema.
 
-![Modelo biológico del sistema musculoesquelético](Biorender_SistemaMusculoesqueletico.png)
+![Modelo biológico del sistema musculoesquelético](PRACTICA3_Diagrama.png)
 
 **Figura 1.** Representación biológica del sistema musculoesquelético y su correspondencia con el modelo mecánico viscoelástico simplificado. Elaboración mediante BioRender.
 
